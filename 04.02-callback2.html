@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function somar(a, b) {
+            return a + b;
+        }
+
+        function multiplicar(a, b) {
+            return a * b;
+        }
+
+        function calculadora(a, b, acao) {
+            /*
+            funcao acao será substituída pela função que utilizarmos no parâmetro, nesse caso podem ser somar e multplicar 
+            */
+            return acao(a, b)
+        }
+
+        function calculadoraDivisao(a, b, function(a,b){
+            return a/b;
+        })
+    </script>
+</body>
+</html>

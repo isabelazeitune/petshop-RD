@@ -8,11 +8,13 @@
 </head>
 <body>
     <script>
-        console.log("*********** PETSHOP DA RD ***********")
+        const EMPESA = "*********** PETSHOP DA RD ***********";
+        console.log("*********** PETSHOP DA RD ***********");
         /* 
             nome, idade, raca, peso, cor, dono, vacinado, servicos
         */
-        var cachorro = {
+        let cachorro = {
+            /* cachorro pode ser constante porque durante todo o código ele não muda */
             nome: "Menino",
             idade: 8,
             raca: "Vira-lata",
@@ -26,15 +28,8 @@
             servicos: ["Banho", "Vacina"]
         }
     
-        function vacinar(cachorro) {
-            // implementar a função: dizer o que a função vai fazer
-            if(cachorro.vacinado) {
-                console.log("Este cachorro já está vacinado!");
-            } else {
-                cachorro.vacinado = true; /* trocar o valor para true */
-                console.log("Vacina aplicada com sucesso!");
-            }
-        }
+        const vacinar = cachorro => cachorro.vacinado ? console.log("Este cachorro já está vacinado!") : ((cachorro.vacinado = true) && console.log("Vacina aplicada com sucesso!"))
+
     </script>
 </body>
 </html>

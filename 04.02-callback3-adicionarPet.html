@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const EMPESA = "*********** PETSHOP DA RD ***********";
+            console.log("*********** PETSHOP DA RD ***********");
+        /* 
+            nome, idade, raca, peso, cor, dono, vacinado, servicos
+        */
+
+        var pets = [];
+        function adicionarPet (nome, idade, raca, especie, peso, cor, dono, vacinado, servicos) {
+            var animal = {
+                nome,
+                idade,
+                raca,
+                especie,
+                peso,
+                cor,
+                dono,
+                vacinado,
+                servicos,
+            };
+
+            pets.push(animal);
+            console.log("Pet adicionado com sucesso!");
+            return pets;
+        }
+
+        exibir();
+        /*
+        FUNÇÕES SÃO CARREGADAS ANTES DE LER CÓDIGO POR CÓDIGO
+        ENTÃO PODE SER CHAMADA ANTES DE PASSAR POR ELA
+        */
+
+        function exibir() {
+            pets.forEach(function(pet,index) {
+                /* 
+                trocar "valor" por "pet" pois cada item de uma lista pet é um pet
+                */
+                 console.log("------------------------");
+                 console.log("Nome do pet:" + " " + pet.nome);
+                 console.log("Espécie do pet:"  + " " + pet.tipo);
+                 console.log(pet.vacinado?"Esse pet já está vacinado":"Esse pet ainda não foi vacinado");
+            })
+        }
+    </script>
+</body>
+</html>
